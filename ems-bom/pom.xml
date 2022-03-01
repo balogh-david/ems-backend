@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Parent info. -->
+    <parent>
+        <groupId>hu.bdavid</groupId>
+        <artifactId>ems</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>ems-bom</artifactId>
+    <packaging>pom</packaging>
+
+    <!-- Versions. -->
+    <properties>
+        <version.org.springframework>5.3.9</version.org.springframework>
+        <version.spring.boot.depedencies>2.5.4</version.spring.boot.depedencies>
+    </properties>
+
+    <!-- Dependencies. -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Project -->
+
+            <!-- Spring Boot -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${version.org.springframework}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${version.spring.boot.depedencies}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
